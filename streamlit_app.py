@@ -39,6 +39,10 @@ def generate_text(convert, model, start_string, generation_length=1000):
 
 
 def playback():
+    try:
+        os.mkdir('data/run')
+    except:
+        pass
     run_dir = 'data/run/' + get_time()
     os.mkdir(run_dir)
     generated_songs = extract_song_snippet(generated_text)
