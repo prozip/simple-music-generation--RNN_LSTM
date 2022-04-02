@@ -57,6 +57,7 @@ def playback():
             print("Generated song", i)
             f = open(run_dir + '/' + str(i) + '.abc','w')
             f.write(song)
+            st.download_button('Download abc', f, file_name='music.abc')
             name = run_dir + '/' + str(i) + '.wav'
             shutil.copy('tmp.wav', name)
 
