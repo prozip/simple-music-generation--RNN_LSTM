@@ -56,10 +56,9 @@ def playback():
             print("Generated song", i)
             f = open(run_dir + '/' + str(i) + '.abc','w')
             f.write(song)
+            st.write(song)
             name = run_dir + '/' + str(i) + '.wav'
             shutil.copy('tmp.wav', name)
-            with open(name, 'rb') as f:
-                st.download_button('Download Wav', f, file_name=name)  # Defaults to 'application/octet-stream'
 
 
 def cover():
