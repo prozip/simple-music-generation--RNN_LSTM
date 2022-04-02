@@ -1,4 +1,9 @@
 import numpy as np
+from datetime import datetime
+
+def get_time():
+    a = str(datetime.now())
+    return a.replace(":", ".")
 
 class Convert:
     def __init__(self, songs):  # sort vocabulary list

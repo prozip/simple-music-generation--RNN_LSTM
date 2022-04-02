@@ -2,7 +2,6 @@ import numpy as np
 import os
 import tensorflow as tf
 from tqdm import tqdm
-import mitdeeplearning as mdl
 
 from datasets import Songs
 from utils import Convert, Preprocessing
