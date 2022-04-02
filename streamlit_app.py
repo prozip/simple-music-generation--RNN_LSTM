@@ -51,7 +51,8 @@ def playback():
         st.markdown(song)
         f = open(run_dir + '/' + str(i) + '.abc','w')
         f.write(song)
-        st.download_button('Download abc', f, file_name='music.abc')
+        with open(run_dir + '/' + str(i) + '.abc', 'rb') as f:
+            st.download_button('Download abc', f, file_name='music.abc')
 
 
 def cover():
