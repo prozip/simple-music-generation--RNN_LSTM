@@ -60,7 +60,7 @@ def playback():
 
 def cover():
     st.title("Music Generaion with RNN/LSTM")
-    st.write(os.getcwd)
+    st.write(os.getcwd())
     st.write(os.listdir())
 
 if __name__ == "__main__":
