@@ -49,17 +49,9 @@ def playback():
 
     for i, song in enumerate(generated_songs):
         st.markdown(song)
-        # Synthesize the waveform from a song
-        waveform = play_song(song)
-
-        # If its a valid song (correct syntax), lets play it!
-        if waveform:
-            print("Generated song", i)
-            f = open(run_dir + '/' + str(i) + '.abc','w')
-            f.write(song)
-            st.download_button('Download abc', f, file_name='music.abc')
-            name = run_dir + '/' + str(i) + '.wav'
-            shutil.copy('tmp.wav', name)
+        f = open(run_dir + '/' + str(i) + '.abc','w')
+        f.write(song)
+        st.download_button('Download abc', f, file_name='music.abc')
 
 
 def cover():
