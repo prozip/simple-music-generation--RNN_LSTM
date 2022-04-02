@@ -48,6 +48,7 @@ def playback():
     generated_songs = extract_song_snippet(generated_text)
 
     for i, song in enumerate(generated_songs):
+        st.write(song)
         # Synthesize the waveform from a song
         waveform = play_song(song)
 
@@ -56,7 +57,6 @@ def playback():
             print("Generated song", i)
             f = open(run_dir + '/' + str(i) + '.abc','w')
             f.write(song)
-            st.write(song)
             name = run_dir + '/' + str(i) + '.wav'
             shutil.copy('tmp.wav', name)
 

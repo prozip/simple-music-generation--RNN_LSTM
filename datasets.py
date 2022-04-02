@@ -48,8 +48,8 @@ def play_generated_song(generated_text):
             model longer or increasing the amount of generated music to \
             ensure complete songs are generated!")
 
-    # for song in songs:
-    #     play_song(song)
+    for song in songs:
+        play_song(song)
     print("None of the songs were valid, try training longer to improve \
         syntax.")
 
