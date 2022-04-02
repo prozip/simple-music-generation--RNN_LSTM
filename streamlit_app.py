@@ -48,7 +48,7 @@ def playback():
     generated_songs = extract_song_snippet(generated_text)
 
     for i, song in enumerate(generated_songs):
-        st.write(song)
+        st.markdown(song)
         # Synthesize the waveform from a song
         waveform = play_song(song)
 
